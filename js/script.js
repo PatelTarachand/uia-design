@@ -1,12 +1,38 @@
 // UIA Website JavaScript
 
 $(document).ready(function() {
-    // Initialize AOS
+    // Mobile detection and setup
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isTablet = /iPad|Android/i.test(navigator.userAgent) && window.innerWidth >= 768;
+
+    // Add mobile classes to body
+    if (isMobile) {
+        $('body').addClass('is-mobile');
+    }
+    if (isTablet) {
+        $('body').addClass('is-tablet');
+    }
+
+    // Viewport height fix for mobile browsers
+    function setViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setViewportHeight();
+    $(window).on('resize orientationchange', function() {
+        setTimeout(setViewportHeight, 100);
+    });
+
+    // Initialize AOS with mobile-friendly settings
     AOS.init({
-        duration: 1000,
+        duration: isMobile ? 600 : 1000,
         once: true,
-        offset: 100,
-        easing: 'ease-out-cubic'
+        offset: isMobile ? 50 : 100,
+        easing: 'ease-out-cubic',
+        disable: function() {
+            return window.innerWidth < 768 && window.innerHeight < 600;
+        }
     });
 
     // Counter Animation
@@ -246,7 +272,7 @@ $(document).ready(function() {
         }
     });
 
-    // Navbar Scroll Effect
+    // Enhanced Navbar Scroll Effect
     $(window).scroll(function() {
         const scrollTop = $(this).scrollTop();
 
@@ -256,12 +282,112 @@ $(document).ready(function() {
             $('.navbar').removeClass('scrolled');
         }
 
-        // Parallax effect for hero section
-        if ($('.hero-section').length) {
+        // Parallax effect for hero section (disabled on mobile for performance)
+        if ($('.hero-section').length && $(window).width() > 768) {
             const parallaxSpeed = 0.5;
             $('.hero-section').css('transform', `translateY(${scrollTop * parallaxSpeed}px)`);
         }
     });
+
+    // Enhanced mobile navbar functionality
+    $('.navbar-toggler').on('click', function(e) {
+        e.preventDefault();
+        const $this = $(this);
+        const $collapse = $('#navbarNav');
+        const isExpanded = $this.attr('aria-expanded') === 'true';
+
+        // Toggle collapse manually for better control
+        if (isExpanded) {
+            $collapse.removeClass('show');
+            $this.attr('aria-expanded', 'false');
+            $this.addClass('collapsed');
+        } else {
+            $collapse.addClass('show');
+            $this.attr('aria-expanded', 'true');
+            $this.removeClass('collapsed');
+        }
+
+        // Haptic feedback on mobile devices
+        if ('vibrate' in navigator) {
+            navigator.vibrate(50);
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    $('.navbar-nav .nav-link').on('click', function() {
+        if ($(window).width() < 992) {
+            const $collapse = $('#navbarNav');
+            const $toggler = $('.navbar-toggler');
+
+            $collapse.removeClass('show');
+            $toggler.attr('aria-expanded', 'false');
+            $toggler.addClass('collapsed');
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    $(document).on('click', function(e) {
+        if ($(window).width() < 992) {
+            const $navbar = $('.navbar');
+            const $collapse = $('#navbarNav');
+            const $toggler = $('.navbar-toggler');
+
+            if (!$navbar.is(e.target) && $navbar.has(e.target).length === 0) {
+                if ($collapse.hasClass('show')) {
+                    $collapse.removeClass('show');
+                    $toggler.attr('aria-expanded', 'false');
+                    $toggler.addClass('collapsed');
+                }
+            }
+        }
+    });
+
+    // Enhanced touch support for carousel
+    if ('ontouchstart' in window) {
+        let startX = 0;
+        let startY = 0;
+        let isScrolling = false;
+
+        $('.carousel').on('touchstart', function(e) {
+            startX = e.originalEvent.touches[0].clientX;
+            startY = e.originalEvent.touches[0].clientY;
+            isScrolling = false;
+        });
+
+        $('.carousel').on('touchmove', function(e) {
+            if (!startX || !startY) return;
+
+            const currentX = e.originalEvent.touches[0].clientX;
+            const currentY = e.originalEvent.touches[0].clientY;
+            const diffX = startX - currentX;
+            const diffY = startY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                isScrolling = false;
+                e.preventDefault(); // Prevent vertical scroll
+            } else {
+                isScrolling = true;
+            }
+        });
+
+        $('.carousel').on('touchend', function(e) {
+            if (isScrolling) return;
+
+            const endX = e.originalEvent.changedTouches[0].clientX;
+            const diffX = startX - endX;
+
+            if (Math.abs(diffX) > 50) { // Minimum swipe distance
+                if (diffX > 0) {
+                    $(this).carousel('next');
+                } else {
+                    $(this).carousel('prev');
+                }
+            }
+
+            startX = 0;
+            startY = 0;
+        });
+    }
 
     // Enhanced smooth scrolling with offset
     function smoothScrollTo(target, offset = 80) {
