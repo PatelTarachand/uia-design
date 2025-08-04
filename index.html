@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urla Industries Association - Leading Industry Association of Chhattisgarh</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="uialogo.png" alt="UIA Logo" height="50" class="me-2">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="office-bearers.html">Office Bearers</a></li>
+                            <li><a class="dropdown-item" href="executive-committee.html">Executive Committee</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="uia-members.html">UIA Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="get-quotation.html">Get Quotation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8" data-aos="fade-up">
+                                    <div class="hero-badge mb-3">
+                                        <span class="badge bg-light text-primary px-3 py-2">
+                                            <i class="fas fa-award me-2"></i>Welcome to UIA
+                                        </span>
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4">
+                                        Welcome to Urla Industries <span class="text-warning">Association</span>
+                                    </h1>
+                                    <p class="lead text-white mb-4">
+                                        Leading Industry Association of Chhattisgarh, representing over <strong>200+ members</strong> in manufacturing steel, aluminium, zinc, power, cement, and much more.
+                                    </p>
+                                    <div class="hero-buttons">
+                                        <a href="#welcome" class="btn btn-primary btn-lg me-3">
+                                            <i class="fas fa-info-circle me-2"></i>Learn More
+                                        </a>
+                                        <a href="uia-members.html" class="btn btn-outline-light btn-lg">
+                                            <i class="fas fa-users me-2"></i>Our Members
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4" data-aos="fade-left">
+                                    <div class="hero-image">
+                                        <div class="floating-card">
+                                            <div class="card bg-white shadow-lg border-0">
+                                                <div class="card-body text-center p-4">
+                                                    <i class="fas fa-industry fa-3x text-primary mb-3"></i>
+                                                    <h5 class="card-title">Industrial Excellence</h5>
+                                                    <p class="card-text text-muted">Building the future together</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8">
+                                    <div class="hero-badge mb-3">
+                                        <span class="badge bg-light text-primary px-3 py-2">
+                                            <i class="fas fa-handshake me-2"></i>35+ Years of Excellence
+                                        </span>
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4">
+                                        Bridging Industries & <span class="text-warning">Government</span>
+                                    </h1>
+                                    <p class="lead text-white mb-4">
+                                        Founded in 1990, UIA has been the voice of industries in Urla Industrial Area, fostering growth and development through strategic partnerships.
+                                    </p>
+                                    <div class="hero-buttons">
+                                        <a href="#about" class="btn btn-primary btn-lg me-3">
+                                            <i class="fas fa-history me-2"></i>Our Journey
+                                        </a>
+                                        <a href="#services" class="btn btn-outline-light btn-lg">
+                                            <i class="fas fa-cogs me-2"></i>Services
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="hero-stats text-center">
+                                        <div class="stat-item mb-4">
+                                            <h2 class="text-warning mb-0" data-counter="200">200+</h2>
+                                            <p class="text-light">Members</p>
+                                        </div>
+                                        <div class="stat-item mb-4">
+                                            <h2 class="text-warning mb-0" data-counter="14">14</h2>
+                                            <p class="text-light">Industries</p>
+                                        </div>
+                                        <div class="stat-item">
+                                            <h2 class="text-warning mb-0" data-counter="35">35+</h2>
+                                            <p class="text-light">Years</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8">
+                                    <div class="hero-badge mb-3">
+                                        <span class="badge bg-light text-primary px-3 py-2">
+                                            <i class="fas fa-leaf me-2"></i>Sustainable Future
+                                        </span>
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4">
+                                        Building a <span class="text-warning">Sustainable</span> Tomorrow
+                                    </h1>
+                                    <p class="lead text-white mb-4">
+                                        Committed to environmental responsibility and sustainable industrial practices for a better future for generations to come.
+                                    </p>
+                                    <div class="hero-buttons">
+                                        <a href="#objectives" class="btn btn-primary btn-lg me-3">
+                                            <i class="fas fa-bullseye me-2"></i>Our Vision
+                                        </a>
+                                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                                            <i class="fas fa-envelope me-2"></i>Contact Us
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="hero-image">
+                                        <div class="floating-card">
+                                            <div class="card bg-white shadow-lg border-0">
+                                                <div class="card-body text-center p-4">
+                                                    <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                                                    <h5 class="card-title">Sustainability</h5>
+                                                    <p class="card-text text-muted">Green initiatives for tomorrow</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <a href="#welcome" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Welcome Message</span>
+                    <h2 class="section-title">Welcome to Urla Industries Association</h2>
+                    <p class="lead text-muted">Your gateway to industrial excellence and collaborative growth</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="welcome-content">
+                        <div class="welcome-card bg-light p-4 rounded shadow-sm mb-4">
+                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <p class="text-muted mb-0">
+                                This page is our welcome message to all visitors and members. We are excited to share our journey and vision with you as we continue to build a stronger industrial community in Chhattisgarh.
+                            </p>
+                        </div>
+                        <div class="welcome-features">
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-handshake text-primary me-3"></i>
+                                <span>Collaborative Partnership</span>
+                            </div>
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-chart-line text-primary me-3"></i>
+                                <span>Industrial Growth</span>
+                            </div>
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-users text-primary me-3"></i>
+                                <span>Community Building</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="welcome-stats">
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center p-4 bg-primary text-white rounded">
+                                    <i class="fas fa-calendar-alt fa-2x mb-2"></i>
+                                    <h3 class="mb-0" data-counter="35">35+</h3>
+                                    <small>Years of Service</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center p-4 bg-success text-white rounded">
+                                    <i class="fas fa-building fa-2x mb-2"></i>
+                                    <h3 class="mb-0" data-counter="200">200+</h3>
+                                    <small>Member Companies</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card text-center p-4 bg-warning text-white rounded">
+                                    <i class="fas fa-industry fa-2x mb-2"></i>
+                                    <h3 class="mb-0" data-counter="14">14</h3>
+                                    <small>Industry Sectors</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card text-center p-4 bg-info text-white rounded">
+                                    <i class="fas fa-handshake fa-2x mb-2"></i>
+                                    <h3 class="mb-0" data-counter="100">100+</h3>
+                                    <small>Partnerships</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">About Us</span>
+                    <h2 class="section-title">About Urla Industries Association</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="about-content">
+                        <p class="lead text-center mb-4">
+                            Urla Industries Association (UIA) is a nonprofit membership organization for a wide range of industries located in Urla Industrial Area, represented by their Directors/Partner/Senior Executives, the association was founded in 1990.
+                        </p>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="about-point">
+                                    <h5><i class="fas fa-cogs text-primary me-2"></i>Our Structure</h5>
+                                    <p class="text-muted">
+                                        UIA's structure and wide range of expertise allow the association to be highly responsive to our members' needs, assessing and shaping legislative and regulatory activity in collaboration with executives from member companies.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-point">
+                                    <h5><i class="fas fa-lightbulb text-primary me-2"></i>Our Understanding</h5>
+                                    <p class="text-muted">
+                                        UIA strives for a detailed understanding of the business operations for our members. Such understanding is vital in translating their technology, business, and policy needs into action.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-mission bg-white p-4 rounded shadow-sm mb-4">
+                            <h5><i class="fas fa-bridge text-primary me-2"></i>Our Mission</h5>
+                            <p class="text-muted mb-0">
+                                UIA has been working as representative of Small, Medium and Large industries of Urla Industrial Area. To bridge the gap between industries and government has been the main objective of UIA. In past years, UIA has worked on basic infrastructure developments, industrial policies etc. that helped Industries to grow.
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="vision-card bg-primary text-white p-4 rounded mb-4">
+                                    <h5><i class="fas fa-eye me-2"></i>Our Vision</h5>
+                                    <p class="mb-0">India's leading Industry association creating a better world for its members, society and country.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="objectives-preview bg-success text-white p-4 rounded mb-4">
+                                    <h5><i class="fas fa-bullseye me-2"></i>Our Objectives</h5>
+                                    <p class="mb-2">UIA exists to deliver value to its members by:</p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li><i class="fas fa-check me-2"></i>Acting as a bridge between members and government</li>
+                                        <li><i class="fas fa-check me-2"></i>Building centre of excellence tool room</li>
+                                        <li><i class="fas fa-check me-2"></i>Being a point of contact for investments</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="#objectives" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-bullseye me-2"></i>View All Objectives
+                            </a>
+                            <a href="office-bearers.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-users me-2"></i>Leadership Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Members Section -->
+    <section id="members" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Our Members</span>
+                    <h2 class="section-title">Featured Member Companies</h2>
+                    <p class="text-muted">Meet some of our distinguished member companies driving industrial excellence</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-industry fa-3x text-primary"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Bhilai Steel Plant</h5>
+                            <p class="member-category">Steel Manufacturing</p>
+                            <span class="member-badge">Premium Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-bolt fa-3x text-warning"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">NTPC Korba</h5>
+                            <p class="member-category">Power Generation</p>
+                            <span class="member-badge">Premium Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-cube fa-3x text-success"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">ACC Cement</h5>
+                            <p class="member-category">Cement Manufacturing</p>
+                            <span class="member-badge">Gold Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-gem fa-3x text-info"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Hindalco Industries</h5>
+                            <p class="member-category">Aluminium Production</p>
+                            <span class="member-badge">Premium Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-cogs fa-3x text-danger"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Jindal Steel & Power</h5>
+                            <p class="member-category">Steel & Power</p>
+                            <span class="member-badge">Premium Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-flask fa-3x text-purple"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Raipur Chemicals</h5>
+                            <p class="member-category">Chemical Industry</p>
+                            <span class="member-badge">Gold Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-hammer fa-3x text-dark"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Ferro Alloys Corporation</h5>
+                            <p class="member-category">Ferro Alloys</p>
+                            <span class="member-badge">Gold Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-leaf fa-3x text-success"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Bilaspur Paper Mills</h5>
+                            <p class="member-category">Paper & Pulp</p>
+                            <span class="member-badge">Silver Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-tint fa-3x text-primary"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Chhattisgarh Textiles</h5>
+                            <p class="member-category">Textile Manufacturing</p>
+                            <span class="member-badge">Silver Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="550">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-truck fa-3x text-warning"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Raipur Engineering</h5>
+                            <p class="member-category">Engineering & Manufacturing</p>
+                            <span class="member-badge">Silver Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-seedling fa-3x text-success"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Agro Industries Ltd</h5>
+                            <p class="member-category">Agro Processing</p>
+                            <span class="member-badge">Silver Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="650">
+                    <div class="member-card">
+                        <div class="member-logo">
+                            <i class="fas fa-microchip fa-3x text-info"></i>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-name">Tech Solutions Pvt Ltd</h5>
+                            <p class="member-category">Technology & IT</p>
+                            <span class="member-badge">Associate Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <p class="text-muted mb-3">And many more distinguished companies...</p>
+                    <a href="uia-members.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-users me-2"></i>View All Members
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-handshake me-2"></i>Join UIA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Our Services</span>
+                    <h2 class="section-title">What We Offer</h2>
+                    <p class="text-muted">Comprehensive support for industrial growth and development</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="service-title">Government Liaison</h5>
+                        <p class="service-description">
+                            Facilitating communication between member companies and government bodies for policy advocacy and compliance support.
+                        </p>
+                        <ul class="service-features">
+                            <li>Policy advocacy</li>
+                            <li>Regulatory compliance</li>
+                            <li>Government meetings</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h5 class="service-title">Industry Networking</h5>
+                        <p class="service-description">
+                            Building strong networks among member companies to foster collaboration and business opportunities.
+                        </p>
+                        <ul class="service-features">
+                            <li>Business networking events</li>
+                            <li>Industry conferences</li>
+                            <li>Trade facilitation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="service-title">Business Development</h5>
+                        <p class="service-description">
+                            Supporting member companies in their growth journey through strategic guidance and market insights.
+                        </p>
+                        <ul class="service-features">
+                            <li>Market research</li>
+                            <li>Growth strategies</li>
+                            <li>Investment opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5 class="service-title">Training & Development</h5>
+                        <p class="service-description">
+                            Providing skill development programs and training sessions to enhance workforce capabilities.
+                        </p>
+                        <ul class="service-features">
+                            <li>Skill development</li>
+                            <li>Technical training</li>
+                            <li>Leadership programs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5 class="service-title">Sustainability Support</h5>
+                        <p class="service-description">
+                            Promoting sustainable practices and environmental responsibility among member companies.
+                        </p>
+                        <ul class="service-features">
+                            <li>Environmental compliance</li>
+                            <li>Green initiatives</li>
+                            <li>Sustainability consulting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h5 class="service-title">Information Services</h5>
+                        <p class="service-description">
+                            Keeping members informed about industry trends, policy changes, and market opportunities.
+                        </p>
+                        <ul class="service-features">
+                            <li>Industry updates</li>
+                            <li>Policy notifications</li>
+                            <li>Market intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objectives" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Our Objectives</span>
+                    <h2 class="section-title">UIA exists to deliver value to its members by:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="objective-card">
+                        <div class="objective-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="objective-title">Government Bridge</h5>
+                        <p>Acting as a bridge between its members and government and other legal bodies, in order to make the relationship smoother and better.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="objective-card">
+                        <div class="objective-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5 class="objective-title">Centre of Excellence</h5>
+                        <p>Building a centre of excellence tool room for its members for better technology, precise results, more scientific data etc.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="objective-card">
+                        <div class="objective-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="objective-title">Investment Hub</h5>
+                        <p>Being a point of contact for anyone seeking investment, joint-partnership or merger etc. in Urla Industrial Area.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="objective-card">
+                        <div class="objective-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h5 class="objective-title">Marketing Events</h5>
+                        <p>Conducting marketing events for the promotion of the member industries.</p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="objective-card">
+                        <div class="objective-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5 class="objective-title">Recognition of Excellence</h5>
+                        <p>Recognition of excellence through Awards programmes to celebrate and motivate outstanding achievements in the industrial sector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Industry Categories</span>
+                    <h2 class="section-title">Our Diverse Portfolio</h2>
+                    <p class="text-muted">Explore our diverse range of industry categories representing the backbone of Chhattisgarh's economy</p>
+                </div>
+            </div>
+            <div class="row" id="categoriesGrid">
+                <!-- Categories will be loaded here -->
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <a href="uia-members.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-eye me-2"></i>View All Members
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Testimonials</span>
+                    <h2 class="section-title">What Our Members Say</h2>
+                    <p class="text-muted">Hear from our valued members about their experience with UIA</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "UIA has been instrumental in helping our company navigate the complex regulatory landscape. Their government liaison services are exceptional."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6 class="author-name">Rajesh Kumar</h6>
+                                <small class="author-position">CEO, Steel Manufacturing Co.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "The networking opportunities provided by UIA have opened new business avenues for us. Highly recommend joining this association."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6 class="author-name">Priya Sharma</h6>
+                                <small class="author-position">Director, Chemical Industries</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "UIA's commitment to sustainability and environmental responsibility aligns perfectly with our company values. Great leadership!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6 class="author-name">Amit Patel</h6>
+                                <small class="author-position">MD, Ferro Alloys Ltd.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Latest Updates</span>
+                    <h2 class="section-title">News & Announcements</h2>
+                    <p class="text-muted">Stay updated with the latest news and developments from UIA</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">Dec</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Policy Update</span>
+                            <h5 class="news-title">New Industrial Policy 2024-29 Draft Released</h5>
+                            <p class="news-excerpt">
+                                The Chhattisgarh government has released the draft of the new industrial policy focusing on sustainable development and digital transformation.
+                            </p>
+                            <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="date-day">10</span>
+                            <span class="date-month">Dec</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Event</span>
+                            <h5 class="news-title">Annual General Meeting 2024</h5>
+                            <p class="news-excerpt">
+                                UIA's Annual General Meeting was successfully conducted with record attendance from member companies and government officials.
+                            </p>
+                            <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="date-day">05</span>
+                            <span class="date-month">Dec</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Achievement</span>
+                            <h5 class="news-title">UIA Receives Excellence Award</h5>
+                            <p class="news-excerpt">
+                                UIA has been recognized for its outstanding contribution to industrial development in Chhattisgarh by the State Government.
+                            </p>
+                            <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <a href="news.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-newspaper me-2"></i>View All News
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- President Message -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <blockquote class="blockquote">
+                        <p class="mb-4">"Any Association Derives its Strength from the Active Participation of Its Members. I am happy and glad to share with you that our team got regular support from all our members from time to time."</p>
+                        <footer class="blockquote-footer text-light">
+                            <strong>Ashwin Garg</strong> <cite title="Source Title">President, UIA</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="col-lg-4 text-center" data-aos="fade-left">
+                    <div class="president-card">
+                        <i class="fas fa-user-tie fa-5x mb-3"></i>
+                        <h4>Ashwin Garg</h4>
+                        <p>President</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Urla Industries Association. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white me-3">Privacy</a>
+                    <a href="contact.html" class="text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Search..." id="searchInput">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
