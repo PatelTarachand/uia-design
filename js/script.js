@@ -119,6 +119,116 @@ $(document).ready(function() {
         window.location.href = 'uia-members.html';
     };
 
+    // View Member Profile Function
+    window.viewMemberProfile = function(memberName) {
+        // Store member name for profile page
+        localStorage.setItem('selectedMember', memberName);
+        // For now, redirect to members page with member highlighted
+        // In future, this could redirect to a dedicated member profile page
+        window.location.href = 'uia-members.html?member=' + encodeURIComponent(memberName);
+    };
+
+    // Open Contact Form Function
+    window.openContactForm = function(memberName) {
+        // Create and show contact modal
+        const modalHtml = `
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactModalLabel">
+                                <i class="fas fa-envelope me-2"></i>Contact ${memberName}
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactName" class="form-label">Your Name *</label>
+                                        <input type="text" class="form-control" id="contactName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactEmail" class="form-label">Your Email *</label>
+                                        <input type="email" class="form-control" id="contactEmail" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactPhone" class="form-label">Your Phone</label>
+                                        <input type="tel" class="form-control" id="contactPhone">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactCompany" class="form-label">Your Company</label>
+                                        <input type="text" class="form-control" id="contactCompany">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label">Subject *</label>
+                                    <input type="text" class="form-control" id="contactSubject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                                </div>
+                                <input type="hidden" id="targetMember" value="${memberName}">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="submitContactForm()">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Remove existing modal if any
+        const existingModal = document.getElementById('contactModal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
+        // Add modal to body
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+        modal.show();
+
+        // Clean up modal after it's hidden
+        document.getElementById('contactModal').addEventListener('hidden.bs.modal', function() {
+            this.remove();
+        });
+    };
+
+    // Submit Contact Form Function
+    window.submitContactForm = function() {
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+
+        // Basic validation
+        const name = document.getElementById('contactName').value.trim();
+        const email = document.getElementById('contactEmail').value.trim();
+        const subject = document.getElementById('contactSubject').value.trim();
+        const message = document.getElementById('contactMessage').value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // Here you would typically send the data to your server
+        // For now, we'll just show a success message
+        alert(`Thank you ${name}! Your message has been sent to ${document.getElementById('targetMember').value}. We will get back to you soon.`);
+
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+        modal.hide();
+    };
+
     // Load Members Data
     const membersData = {
         "Chemical Unit": [

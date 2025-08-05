@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Quotation - Urla Industries Association</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid px-3 px-lg-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="uialogo.png" alt="UIA Logo" class="navbar-logo me-2">
+            </a>
+
+            <div class="navbar-actions d-flex align-items-center order-lg-3">
+                <button class="btn btn-outline-primary search-btn me-2 d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <span class="d-none d-xl-inline ms-1"></span>
+                </button>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home d-lg-none me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-info-circle d-lg-none me-2"></i>About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="about-us.html">
+                                <i class="fas fa-info-circle me-2"></i>About UIA
+                            </a></li>
+                            <li><a class="dropdown-item" href="office-bearers.html">
+                                <i class="fas fa-users me-2"></i>Office Bearers
+                            </a></li>
+                            <li><a class="dropdown-item" href="executive-committee.html">
+                                <i class="fas fa-user-tie me-2"></i>Executive Committee
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="uia-members.html">
+                            <i class="fas fa-building d-lg-none me-2"></i>UIA Members
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            <i class="fas fa-newspaper d-lg-none me-2"></i>News
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="get-quotation.html">
+                            <i class="fas fa-file-invoice d-lg-none me-2"></i>Get Quotation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope d-lg-none me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search me-2"></i>Search
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Get Quotation</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Get Quotation</h1>
+                    <p class="lead">Request quotes from our trusted member companies for quality industrial products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotation Info Cards -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card bg-white p-4 rounded-3 shadow-lg text-center h-100 border-0">
+                        <div class="contact-icon bg-primary bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-industry text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Quality Products</h5>
+                        <p class="text-muted mb-3">Get quotes for premium industrial products from certified UIA member companies</p>
+                        <div class="badge bg-primary text-white">200+ Members</div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card bg-white p-4 rounded-3 shadow-lg text-center h-100 border-0">
+                        <div class="contact-icon bg-success bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-clock text-success fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Quick Response</h5>
+                        <p class="text-muted mb-3">Receive competitive quotes within 24-48 hours from multiple suppliers</p>
+                        <div class="badge bg-success text-white">Fast Turnaround</div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-card bg-white p-4 rounded-3 shadow-lg text-center h-100 border-0">
+                        <div class="contact-icon bg-info bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-handshake text-info fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Trusted Network</h5>
+                        <p class="text-muted mb-3">Connect with verified and reliable industrial suppliers in Chhattisgarh</p>
+                        <div class="badge bg-info text-white">Verified Suppliers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotation Form Section -->
+    <section class="py-5 position-relative overflow-hidden">
+        <div class="contact-bg-pattern"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Request Quote</span>
+                    <h2 class="section-title">Get Quotation from UIA Members</h2>
+                    <p class="lead text-muted">Fill out the form below to receive competitive quotes from our member companies</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="contact-form-wrapper bg-white p-5 rounded-3 shadow-lg border-0 position-relative overflow-hidden" data-aos="fade-up">
+                        <div class="form-bg-pattern"></div>
+                        <div class="position-relative">
+                            <div class="text-center mb-5">
+                                <h3 class="text-primary fw-bold mb-3">Request Your Quotation</h3>
+                                <p class="text-muted">Provide your requirements and we'll connect you with the right suppliers</p>
+                            </div>
+
+                            <form id="quotationForm" class="contact-form">
+                                <!-- Personal Information -->
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <h5 class="text-primary fw-bold mb-3">
+                                            <i class="fas fa-user me-2"></i>Personal Information
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your Name" required>
+                                            <label for="fullName"><i class="fas fa-user me-2 text-primary"></i>Your Name (required) *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                            <label for="email"><i class="fas fa-envelope me-2 text-primary"></i>Your Email (required) *</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4 mt-1">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone">
+                                            <label for="phone"><i class="fas fa-phone me-2 text-primary"></i>Your Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
+                                            <label for="company"><i class="fas fa-building me-2 text-primary"></i>Company Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product Selection -->
+                                <div class="row g-4 mt-4">
+                                    <div class="col-12">
+                                        <h5 class="text-primary fw-bold mb-3">
+                                            <i class="fas fa-boxes me-2"></i>Product Selection
+                                        </h5>
+                                        <p class="text-muted mb-3">Select the products you need quotes for:</p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="aluminiumGrills" name="products[]" value="Aluminium Grills">
+                                            <label class="form-check-label" for="aluminiumGrills">
+                                                <i class="fas fa-th me-2 text-primary"></i>Aluminium Grills
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="aluminiumSections" name="products[]" value="Aluminium Sections">
+                                            <label class="form-check-label" for="aluminiumSections">
+                                                <i class="fas fa-ruler me-2 text-primary"></i>Aluminium Sections
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="commercialGases" name="products[]" value="Commercial Gases">
+                                            <label class="form-check-label" for="commercialGases">
+                                                <i class="fas fa-gas-pump me-2 text-primary"></i>Commercial Gases
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="msIngots" name="products[]" value="MS Ingots">
+                                            <label class="form-check-label" for="msIngots">
+                                                <i class="fas fa-cube me-2 text-primary"></i>MS Ingots
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="msRounds" name="products[]" value="MS Rounds">
+                                            <label class="form-check-label" for="msRounds">
+                                                <i class="fas fa-circle me-2 text-primary"></i>MS Rounds
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check product-check">
+                                            <input class="form-check-input" type="checkbox" id="tmtBars" name="products[]" value="TMT Bars">
+                                            <label class="form-check-label" for="tmtBars">
+                                                <i class="fas fa-bars me-2 text-primary"></i>TMT Bars
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Message Section -->
+                                <div class="row g-4 mt-4">
+                                    <div class="col-12">
+                                        <h5 class="text-primary fw-bold mb-3">
+                                            <i class="fas fa-comment me-2"></i>Additional Requirements
+                                        </h5>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Your Message" style="height: 120px" required></textarea>
+                                            <label for="message"><i class="fas fa-comment me-2 text-primary"></i>Your Message *</label>
+                                        </div>
+                                        <div class="form-text mt-2">
+                                            <i class="fas fa-info-circle me-1"></i>
+                                            Please specify quantities, specifications, delivery requirements, and any other details.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Submit -->
+                                <div class="mt-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to share my contact information with UIA member companies for quotation purposes *
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-5">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+                                        <i class="fas fa-file-invoice me-2"></i>Request Quotation
+                                    </button>
+                                    <div class="mt-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-shield-alt me-1"></i>
+                                            Your information will only be shared with relevant UIA member companies.
+                                        </small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Process</span>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="lead text-muted">Simple steps to get your quotations</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-edit fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Fill the Form</h5>
+                        <p class="text-muted">Complete the quotation form with your requirements and contact details</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-share-alt fa-3x text-success"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">We Connect</h5>
+                        <p class="text-muted">Your requirements are shared with relevant UIA member companies</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-file-invoice-dollar fa-3x text-info"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Receive Quotes</h5>
+                        <p class="text-muted">Get competitive quotations directly from multiple suppliers</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-handshake fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Choose & Deal</h5>
+                        <p class="text-muted">Compare quotes and negotiate directly with your preferred supplier</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge">Products</span>
+                    <h2 class="section-title">Available Products</h2>
+                    <p class="lead text-muted">Quality industrial products from our trusted member companies</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card bg-white p-4 rounded-3 shadow-lg border-0 h-100">
+                        <div class="product-icon bg-primary bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-th text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Aluminium Products</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Aluminium Grills</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Aluminium Sections</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Fabrication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card bg-white p-4 rounded-3 shadow-lg border-0 h-100">
+                        <div class="product-icon bg-success bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-industry text-success fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Steel Products</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>MS Ingots</li>
+                            <li><i class="fas fa-check text-success me-2"></i>MS Rounds</li>
+                            <li><i class="fas fa-check text-success me-2"></i>TMT Bars</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card bg-white p-4 rounded-3 shadow-lg border-0 h-100">
+                        <div class="product-icon bg-info bg-opacity-10 p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="fas fa-gas-pump text-info fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Industrial Gases</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Commercial Gases</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Industrial Oxygen</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Specialty Gases</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-4">
+                        <img src="uialogo.png" alt="UIA Logo" class="footer-logo mb-3" style="height: 60px;">
+                        <h5 class="text-white fw-bold">Urla Industries Association</h5>
+                        <p class="text-light opacity-75">Leading Industry Association of Chhattisgarh for over 35 years</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="uia-members.html">Members</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="get-quotation.html">Get Quotation</a></li>
+                        <li><a href="#">Government Liaison</a></li>
+                        <li><a href="#">Business Networking</a></li>
+                        <li><a href="#">Investment Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Urla Industrial Area, Raipur, CG</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i>+91 771 234 5678</p>
+                        <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@uia.org.in</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 opacity-75">&copy; 2024 Urla Industries Association. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 opacity-75">Developed with ❤️ for UIA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="searchModalLabel">
+                        <i class="fas fa-search me-2"></i>Search UIA
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-form">
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Search for members, services, or information..." id="searchInput">
+                            <button class="btn btn-primary" type="button" id="searchButton">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search-suggestions mt-4">
+                        <h6 class="text-muted mb-3">Popular Searches:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-light text-dark">Steel Companies</span>
+                            <span class="badge bg-light text-dark">Aluminium Suppliers</span>
+                            <span class="badge bg-light text-dark">Chemical Industries</span>
+                            <span class="badge bg-light text-dark">Power Companies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0 text-center">
+                    <div class="w-100">
+                        <div class="success-icon mb-3">
+                            <i class="fas fa-check-circle fa-4x text-success"></i>
+                        </div>
+                        <h5 class="modal-title text-success fw-bold" id="successModalLabel">Quotation Request Submitted!</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-4">Thank you for your quotation request. We have successfully received your requirements and will share them with relevant UIA member companies.</p>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        You can expect to receive quotations within <strong>24-48 hours</strong> directly from our member companies.
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <i class="fas fa-check me-2"></i>Got it!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/quotation.js"></script>
+</body>
+</html>
